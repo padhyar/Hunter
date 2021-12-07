@@ -2,15 +2,14 @@ package com.sabih.hunta.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @AllArgsConstructor
-@Entity
 @Data
+@NoArgsConstructor
+@Entity
 public class Description {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -18,11 +17,9 @@ public class Description {
     private String jobrole;
     private String location;
     private String salary;
+    @OneToOne(mappedBy = "description")
+    private Application application;
 
-
-    public Description() {
-
-    }
 
     public Description(String jobrole, String location, String salary) {
         this.jobrole = jobrole;
