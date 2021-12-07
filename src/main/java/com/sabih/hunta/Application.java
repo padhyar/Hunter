@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Application {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private Long id;
     private String companyName;
 
     public Application(String companyName){
