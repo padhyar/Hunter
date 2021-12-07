@@ -1,6 +1,6 @@
 package com.sabih.hunta.Controller;
 
-import com.sabih.hunta.Application;
+import com.sabih.hunta.Model.Application;
 import com.sabih.hunta.services.ApplicationServices;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
